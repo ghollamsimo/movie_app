@@ -1,0 +1,93 @@
+body{
+    overflow-x: hidden;
+}
+.movies--container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.mainBg_Color{
+    background-color:#0c1e25;
+    width: 100%;
+}
+.secondaryBgColor{
+    background-color: #fff;
+    width: 100%;
+}
+.movies--container img{
+    cursor: pointer;
+    width: 310px;
+    height: 550px;
+    margin: 25px 0px 4px 15px;
+    border-radius: 18px;
+}
+.mainColor{
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    font-size: 1rem;
+}
+#Nothing{
+    display: none;
+}
+.secondaryColor{
+    color: #ff206e;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    font-size: 1rem;
+}
+.movies--container h5, .movies--container img{
+    cursor: pointer;
+    transition: .7s;
+}
+.movies--container h5{
+    width: 100%;
+    margin: 10px;
+}
+.movies--container img:hover{
+    transform: scale(1.04);
+}
+#container{
+    position: relative;
+}
+#hide{
+    display: none;
+}
+#smaller-Text{
+    width: 65%;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+}
+#play_Icon{
+    position: absolute;
+    bottom: 70px;
+    left: 40px;
+    visibility: visible;
+    z-index: 100;
+    cursor: pointer;
+}
+#Exit1{
+    position: absolute;
+    margin-left: 475px;
+    margin-top: 67px;
+    z-index: 999;
+}
+#Nothing{
+    color: green;
+}
+#No_Container{
+    opacity: 0.60;
+}
+.DarkTheme{
+    color:#fff;
+}
+.LightThemeClose{
+    color: #ff206e;
+}
+/* @media screen and (max-width: 960px) {
+  .movies--container img{
+    margin: 57px;
+  }
+} */

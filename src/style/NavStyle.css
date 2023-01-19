@@ -1,0 +1,127 @@
+
+nav {
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    background-color: #001219;
+    align-items: center;
+}
+nav h1{
+    color: rgb(0, 0, 0);
+    font-size: 2rem;
+    margin-left: 40px;
+}
+nav a {
+    text-decoration: none;
+}
+nav span{
+    cursor: pointer;
+    color: #000000;
+    cursor: pointer;
+    margin-left: 40px;
+    font-size: .85rem;
+    text-transform: uppercase;
+    transition: 0.6s;
+}
+nav span:hover{
+    color:  #5858c2;
+    padding-bottom: 5px;
+}
+span #HomeLight, #MoviesLight, #TrendingLight, #PricingLight{
+    color: #fff;
+}
+span #HomeLight:hover, #MoviesLight:hover, #TrendingLight:hover, #PricingLight:hover{
+    border-bottom: 2px solid #ff206e;
+}
+#navBarColor{
+    background-color: #38bdab;
+    transition: .6s;
+}
+.nav-options{
+    display: flex;
+    align-items: center;
+}
+#heading{
+    color: #ff206e;
+}
+#navBarColor span:hover{
+    border-bottom: 2px solid #ff206e;
+    padding-bottom: 5px;
+}
+.input-grouup{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#Color-switcher{
+    position: relative;
+    margin-right: 40px;
+    background-color: #413E44;
+    width: 80px;
+    height: 40px;
+    border-radius: 20px;
+}
+#Color-switcher-mover{
+    position: absolute;
+    left: 5px;
+    top: 4px;
+    background-color: #fff;
+    width: 33px;
+    height: 33px;
+    border-radius: 50%;
+    transition: .6s;
+}
+#Color-switcher-moved{
+    position: absolute;
+    background-color: #fff;
+    left: 40px;
+    top: 4px;
+    width: 33px;
+    height: 33px;
+    border-radius: 50%;
+    transition: .6s;
+}
+.input-grouup input{
+    background:  #0c0c14;
+    color: #fff;
+    position: relative;
+    width: 323px;
+    height: 4vh;
+    border-radius: 16px;
+    border: none;
+    margin-right: 30px;
+    outline: none;
+    padding: 20px 5px;
+    cursor: text;
+}
+.input-grouup input[type='text']{
+    padding-left: 17px;
+    font-size: 1rem;
+    color: rgb(255, 255, 255);
+}
+.input-grouup input::placeholder{
+    color: rgb(255, 255, 255);
+}
+.input-grouup input:focus{
+    outline: none;
+}
+#search{
+    position: absolute;
+    margin-left: 299px;
+    cursor: pointer;
+}
+.links{
+    margin: 20px;
+    font-family: 'Raleway', sans-serif;
+
+}
+.nav_options{
+    display: grid; 
+    grid-template-columns: 1fr;
+}
+
+.mobile{
+    z-index: 1;
+    display: inline;
+    
+}
