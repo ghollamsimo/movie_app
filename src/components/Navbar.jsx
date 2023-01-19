@@ -46,9 +46,9 @@ const Navbar = () => {
         <div className='input-grouup'>
         <input type="text" placeholder='search Wathever you Want ' onChange={(e) => setInputValue (e.target.value)} />
         <HiSearch fontSize={21} color="#fff" id='search' />
-        <div className="login">
+        {/* <div className="login">
           <button><Link to="/login">Login</Link></button>
-        </div>
+        </div> */}
         </div>
         {/* Mobile nav */}
         <div className="mobile">

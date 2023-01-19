@@ -85,7 +85,7 @@ span #HomeLight:hover, #MoviesLight:hover, #TrendingLight:hover, #PricingLight:h
     background:  #0c0c14;
     color: #fff;
     position: relative;
-    width: 240px;
+    width: 270px;
     height: 4vh;
     border-radius: 16px;
     border: none;
@@ -107,7 +107,7 @@ span #HomeLight:hover, #MoviesLight:hover, #TrendingLight:hover, #PricingLight:h
 }
 #search{
     position: absolute;
-    margin-left: 210px;
+    margin-left: 230px;
     cursor: pointer;
 }
 .login{
