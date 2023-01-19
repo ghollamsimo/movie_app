@@ -27,6 +27,7 @@ const Navbar = () => {
           </div>
         </div>
         <div className="nav-options">
+          
         <ul className="md:flex hidden uppercase items-center gap-8 font-[Raleway] links">
         <h1 className="logo">CimaFlex</h1>
         <NavLink to="/">
@@ -40,15 +41,16 @@ const Navbar = () => {
           </NavLink>
           <NavLink to="/pricing">
           <span id={toggle ? 'Movies':'MoviesLight'}>Pricing</span>
-          </NavLink>        
+          </NavLink>     
+          <div className="login">
+          <button><Link to="/login">Login</Link></button>
+        </div>    
         </ul>
         </div>
         <div className='input-grouup'>
         <input type="text" placeholder='search Wathever you Want ' onChange={(e) => setInputValue (e.target.value)} />
         <HiSearch fontSize={21} color="#fff" id='search' />
-        {/* <div className="login">
-          <button><Link to="/login">Login</Link></button>
-        </div> */}
+        
         </div>
         {/* Mobile nav */}
         <div className="mobile">
@@ -58,10 +60,15 @@ const Navbar = () => {
         duration-500 z-index-1 ${open ? "left-0" : "left-[-100%]"}
         `}
         >
+          <li><h1 className="logo">CimaFlex</h1></li>
+           {/* <h1 className="logo">CimaFlex</h1> */}
           <li><NavLink to="/">Movies</NavLink></li>
           <li><NavLink to="/tvshows">TvShow</NavLink></li>
           <li><NavLink to="/trending">Trending</NavLink></li>
           <li><NavLink to="/pricing">Pricing</NavLink></li>
+          <div className="login_mobile">
+          <button><Link to="/login">Login</Link></button>
+        </div>
         </ul>
         </div>
       </div>

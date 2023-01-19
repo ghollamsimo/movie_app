@@ -11,7 +11,6 @@ const Movies = () => {
   const {trailer, setTrailer} =useState(true)
   const shown = input ? 'search' : 'discover'
   const Api = `https://api.themoviedb.org/3/${shown}/movie`
-  
   const Imges = 'https://image.tmdb.org/t/p/w500/'
   const MovieCall = async () => {
     const data = await axios.get(Api, {
@@ -30,7 +29,7 @@ const Movies = () => {
    console.log(moviesDatat)
   return (
     <Fragment>
-        <div className={toggle ? "" : ''}>
+        <div className={toggle ? "mainBg_Color" : 'secondaryBgColor'}>
           <div className='movies--container'>
         {moviesDatat.map((movie) => {
           return(
@@ -44,7 +43,7 @@ const Movies = () => {
                 {movie.title}
               </h5>
             </div>
-            </Fragment>
+          </Fragment>
         )
         })}
         </div>

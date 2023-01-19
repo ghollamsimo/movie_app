@@ -1,8 +1,61 @@
-import React from 'react'
+import React, { Fragment, useEffect, useState, useContext } from 'react'
+import axios from 'axios'
+import {AiFillPlayCircle, AiOutlineClose} from 'react-icons/ai' 
+import NOIMG from '../assets/no_img.jpg'
+import {Container} from './Navbar'
+import '../style/video.css'
 
 const TvShows = () => {
+  const {toggle, inputValue } = useContext(Container)
+  const [showData, setShowData] = useState([])
+  const {trailer, setTrailer} = useState(false)
+  const [title, setTitle] = useState('')
+  const Api = "https://api.themoviedb.org/3/discover/tv"
+  const Imges = 'https://image.tmdb.org/t/p/w500/'
+  const TvShows = async () => {
+    const data = await axios.get(Api, {
+      params:{
+        api_key:'515a59e45f8a49bc7ac768406359f529',
+      }
+    })
+    const results =  (data.data.results)
+    setShowData(results)
+  }
+  useEffect(() => {
+    TvShows()
+  },[])
+  console.log(showData)
+
+  const TvShowtitle = (shows) =>{
+    setTitle(shows)
+     setTrailer(trailer)
+  }
   return (
-    <div>TvShows</div>
+    <Fragment>
+       <div className={toggle ? "mainBg_Color" : 'secondaryBgColor'}>
+          <div className='movies--container'>
+      {showData.map((shows)=>{
+        return(
+          <Fragment key={shows.id}>
+            <div id={trailer ? 'container' : 'No_Container'}>
+               <AiFillPlayCircle fontSize={40} color="#FFF" id={trailer ?  'play_Icon' : 'hide'} onClick={() => TvShowtitle(shows)}/> 
+              <img src={shows.poster_path ? `${Imges}${shows.poster_path}` : NOIMG} alt="" onClick={() => TvShowtitle(shows)}/>
+              <h5 className={toggle ? 'mainColor' : 'secondaryColor'}
+               id={shows.name.length > 40 ? 'smaller-Text' : ""}>
+                {shows.name}
+              </h5>
+            </div>
+          </Fragment>
+        )
+      })}
+      {/* <AiOutlineClose id={trailer ? 'Nothing' : 'Exit1' } 
+       className={toggle ? 'DarkTheme' : 'LightThemeClose'}
+       fontSize={55} color="#fff" cursor={'pointer'} 
+       onClick={() => setTrailer(!true)}
+       /> */}
+      </div>
+      </div>
+    </Fragment>
   )
 }
 

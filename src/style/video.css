@@ -7,7 +7,7 @@ body{
     justify-content: center;
 }
 .mainBg_Color{
-    background-color:#0c1e25;
+    background-color:#0c0c14;
     width: 100%;
 }
 .secondaryBgColor{
@@ -20,6 +20,10 @@ body{
     height: 550px;
     margin: 25px 0px 4px 15px;
     border-radius: 18px;
+    opacity: 0.40;
+}
+.movies--container img:hover{
+    opacity: 1;
 }
 .mainColor{
     color: #fff;
@@ -65,20 +69,20 @@ body{
     bottom: 70px;
     left: 40px;
     visibility: visible;
-    z-index: 100;
+    z-index: 1;
     cursor: pointer;
 }
 #Exit1{
     position: absolute;
     margin-left: 475px;
     margin-top: 67px;
-    z-index: 999;
+    z-index: 1000;
 }
 #Nothing{
     color: green;
 }
 #No_Container{
-    opacity: 0.60;
+    opacity: 0.80;
 }
 .DarkTheme{
     color:#fff;
@@ -86,8 +90,8 @@ body{
 .LightThemeClose{
     color: #ff206e;
 }
-/* @media screen and (max-width: 960px) {
+ @media screen and (max-width: 960px) {
   .movies--container img{
-    margin: 57px;
+    width: 220px;
   }
-} */
+} 
