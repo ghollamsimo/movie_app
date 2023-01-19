@@ -45,7 +45,6 @@ const Navbar = () => {
         <div className='input-grouup'>
         <input type="text" placeholder='search Wathever you Want ' onChange={(e) => setInputValue (e.target.value)} />
         <HiSearch fontSize={21} color="#fff" id='search' />
-        
         </div>
         {/* Mobile nav */}
         <div className="mobile">
@@ -55,19 +54,10 @@ const Navbar = () => {
         duration-500 z-index-1 ${open ? "left-0" : "left-[-100%]"}
         `}
         >
-          <NavLink to="/">
-          <span id={toggle ? 'Movies':'MoviesLight'}>Movies</span>
-          </NavLink>
-          <NavLink to="/tvshows">
-          <span id={toggle ? 'Movies':'MoviesLight'}>TvShow</span>
-          </NavLink>
-          <NavLink to="/trending">
-          <span id={toggle ? 'Movies':'MoviesLight'}>Trending</span>
-          </NavLink>
-          <NavLink to="/pricing">
-          <span id={toggle ? 'Movies':'MoviesLight'}>Pricing</span>
-          </NavLink> 
-            
+          <li><NavLink to="/">Movies</NavLink></li>
+          <li><NavLink to="/tvshows">TvShow</NavLink></li>
+          <li><NavLink to="/trending">Trending</NavLink></li>
+          <li><NavLink to="/pricing">Pricing</NavLink></li>
         </ul>
         </div>
       </div>
