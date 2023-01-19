@@ -3,8 +3,9 @@ import Movies from './Movies'
 import TvShows from './TvShows'
 import Trending from './Trending'
 import Pricing from './Pricing'
+import Login from '../pages/Login'
 import {HiSearch} from 'react-icons/hi'
-import { NavLink, Route, Routes } from 'react-router-dom'
+import { NavLink, Route, Routes, Link } from 'react-router-dom'
 import '../style/NavStyle.css'
 import { Fragment } from "react";
 
@@ -45,6 +46,9 @@ const Navbar = () => {
         <div className='input-grouup'>
         <input type="text" placeholder='search Wathever you Want ' onChange={(e) => setInputValue (e.target.value)} />
         <HiSearch fontSize={21} color="#fff" id='search' />
+        <div className="login">
+          <button><Link to="/login">Login</Link></button>
+        </div>
         </div>
         {/* Mobile nav */}
         <div className="mobile">
@@ -67,6 +71,7 @@ const Navbar = () => {
         <Route path="tvshows" element={<TvShows/>}/>
         <Route path="trending" element={<Trending/>}/>
         <Route path="pricing" element={<Pricing/>}/>  
+        <Route path="login" element={<Login/>}/>
     </Routes>
     </Fragment>
     </Container.Provider>
