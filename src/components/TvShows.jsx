@@ -7,15 +7,18 @@ import '../style/video.css'
 
 const TvShows = () => {
   const {toggle, inputValue } = useContext(Container)
+  const input =inputValue
   const [showData, setShowData] = useState([])
-  const {trailer, setTrailer} = useState(false)
+  const [trailer, setTrailer] = useState(true)
   const [title, setTitle] = useState('')
-  const Api = "https://api.themoviedb.org/3/discover/tv"
+  const shown = input ? 'search' : 'discover'
+  const Api = `https://api.themoviedb.org/3/${shown}/tv`
   const Imges = 'https://image.tmdb.org/t/p/w500/'
   const TvShows = async () => {
     const data = await axios.get(Api, {
       params:{
         api_key:'515a59e45f8a49bc7ac768406359f529',
+        query:input
       }
     })
     const results =  (data.data.results)
@@ -23,12 +26,12 @@ const TvShows = () => {
   }
   useEffect(() => {
     TvShows()
-  },[])
+  },[input])
   console.log(showData)
 
   const TvShowtitle = (shows) =>{
     setTitle(shows)
-     setTrailer(trailer)
+     setTrailer(!trailer)
   }
   return (
     <Fragment>
@@ -39,7 +42,10 @@ const TvShows = () => {
           <Fragment key={shows.id}>
             <div id={trailer ? 'container' : 'No_Container'}>
                <AiFillPlayCircle fontSize={40} color="#FFF" id={trailer ?  'play_Icon' : 'hide'} onClick={() => TvShowtitle(shows)}/> 
-              <img src={shows.poster_path ? `${Imges}${shows.poster_path}` : NOIMG} alt="" onClick={() => TvShowtitle(shows)}/>
+              <img src={shows.poster_path ? `${Imges}${shows.poster_path}` : NOIMG}
+               alt=""
+                onClick={() => TvShowtitle(shows)}
+              />
               <h5 className={toggle ? 'mainColor' : 'secondaryColor'}
                id={shows.name.length > 40 ? 'smaller-Text' : ""}>
                 {shows.name}
@@ -48,11 +54,11 @@ const TvShows = () => {
           </Fragment>
         )
       })}
-      {/* <AiOutlineClose id={trailer ? 'Nothing' : 'Exit1' } 
+        <AiOutlineClose id={trailer ? 'Nothing' : 'Exit1' } 
        className={toggle ? 'DarkTheme' : 'LightThemeClose'}
        fontSize={55} color="#fff" cursor={'pointer'} 
-       onClick={() => setTrailer(!true)}
-       /> */}
+       onClick={() => setTrailer(true)}
+       />  
       </div>
       </div>
     </Fragment>
