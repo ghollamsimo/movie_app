@@ -90,6 +90,15 @@ body{
 .LightThemeClose{
     color: #ff206e;
 }
+@media screen and (max-width: 1024px) {
+    .movies--container{
+        grid-template-columns: repeat(3, 1fr);
+    }
+  .movies--container img{
+    width: 240px;
+    height: 340px;
+  }
+} 
  @media screen and (max-width: 600px) {
     .movies--container{
         grid-template-columns: repeat(2, 1fr);
