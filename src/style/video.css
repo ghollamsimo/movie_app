@@ -95,7 +95,7 @@ body{
         grid-template-columns: repeat(2, 1fr);
     }
   .movies--container img{
-    width: 200px;
-    height: 300px;
+    width: 170px;
+    height: 260px;
   }
 } 
