@@ -2,8 +2,8 @@ body{
     overflow-x: hidden;
 }
 .movies--container{
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
     justify-content: center;
 }
 .mainBg_Color{
@@ -91,6 +91,9 @@ body{
     color: #ff206e;
 }
  @media screen and (max-width: 600px) {
+    .movies--container{
+        grid-template-columns: repeat(2, 1fr);
+    }
   .movies--container img{
     width: 200px;
     height: 300px;
