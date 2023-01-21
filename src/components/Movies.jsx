@@ -4,6 +4,8 @@ import {Container} from './Navbar'
 import {AiFillPlayCircle, AiOutlineClose} from 'react-icons/ai'
 import '../style/video.css'
 import NOIMG from '../assets/no_img.jpg'
+import TrailerMovie from '../video/TrailerMovie'
+
 const Movies = () => {
   const {toggle, inputValue } = useContext(Container)
   const input =inputValue
@@ -29,7 +31,6 @@ const Movies = () => {
       MovieCall()
     }, 100)
    },[input])
-   console.log(moviesDatat)
 
    const Moviestitle =(movie)=>{
     setMovieTitle(movie.title)
@@ -54,6 +55,7 @@ const Movies = () => {
           </Fragment>
         )
         })}
+        {trailer ? console.log : <TrailerMovie movieTitle={movieTitle}/>}
            <AiOutlineClose id={trailer ? 'Nothing' : 'Exit1' } 
        className={toggle ? 'DarkTheme' : 'LightThemeClose'}
        fontSize={55} color="#fff" cursor={'pointer'} 

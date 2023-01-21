@@ -17,7 +17,7 @@ body{
 .movies--container img{
     cursor: pointer;
     width: 310px;
-    height: 550px;
+    height: 510px;
     margin: 25px 0px 4px 15px;
     border-radius: 18px;
     opacity: 0.40;
@@ -66,14 +66,14 @@ body{
 }
 #play_Icon{
     position: absolute;
-    bottom: 70px;
+    bottom: 55px;
     left: 40px;
     visibility: visible;
     z-index: 0.99;
     cursor: pointer;
 }
 #Exit1{
-    position: absolute;
+    position: fixed;
     margin-left: 900px;
     margin-top: 67px;
     z-index: 1000;
@@ -109,5 +109,8 @@ body{
   .movies--container img{
     width: 170px;
     height: 260px;
+  }
+  #Exit1{
+    margin-left: 400px;
   }
 } 
