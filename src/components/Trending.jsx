@@ -47,10 +47,10 @@ const Trending = () => {
                 <div id={trailer ? 'container' : 'No_Container'}>
                  <AiFillPlayCircle color='#fff' fontSize={40} id={trailer ? 'play_Icon' : 'hide'} onClick={() => trendTitle(trend)}/>
                  <img src={trend.poster_path ? `${Imges}${trend.poster_path}` : NOIMG } alt="" onClick={() => TrendTitle(trend)} />
-                 <h5 className={toggle ? 'mainColor' : 'secondaryColor'}
+                 <h3 className={toggle ? 'mainColor' : 'secondaryColor'}
                id= 'smaller-Text' >
                 {trend.title}
-              </h5> 
+              </h3> 
                 </div>
                 </Fragment>
               )

@@ -1,0 +1,39 @@
+.footer__container{
+    background-color:  #fff;
+    
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer__container-links{
+    margin: 20px;
+}
+.footer__container-links p{
+    color: #0c0c14;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.3rem;
+    margin: 20px;
+    text-align: center;
+}
+.footer__container-links a{
+    color: #0c0c14;
+    font-family: 'Raleway', sans-serif;
+    margin: 10px;
+    transition: 1s;
+}
+.footer__container-links a:hover{
+    color: rgb(170, 164, 164);
+}
+
+/* ==================for phone================ */
+@media only screen and (max-width: 600px) {
+    .footer__container{
+        height: fit-content;
+    }
+    .footer__container-links{
+        display: grid;
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+  }
