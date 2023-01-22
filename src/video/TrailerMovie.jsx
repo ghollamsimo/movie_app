@@ -24,7 +24,7 @@ const TrailerMovie = ({movieTitle}) => {
 
         </div>
         <div className='player'>
-        <ReactPlayer url={videoURL} controls={true} muted={false } />
+        <ReactPlayer className='video' url={videoURL} controls={true} muted={false } />
         </div>
     </Fragment>
   )
