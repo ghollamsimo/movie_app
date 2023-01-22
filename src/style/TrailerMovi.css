@@ -31,8 +31,6 @@
 @media screen and (max-width: 600px) {
    .player{
     margin-left: 0px;
-   }
-   #TrailerMovie-name-dark{
-    width: fit-content;
+    width: 0px;
    }
 } 

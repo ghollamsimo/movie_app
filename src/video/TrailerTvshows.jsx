@@ -2,14 +2,13 @@ import React, {Fragment, useEffect, useState} from 'react'
 import ReactPlayer from 'react-player';
 import movieTrailer from 'movie-trailer'
 import '../style/TrailerMovi.css'
-
-const TrailerMovie = ({movieTitle}) => {
+const TrailerTvshows = ({title}) => {
     const [video, setVideo] = useState("inception");
     const [videoURL, setVideoURL] = 
       useState("");
 
       function handleSearch() {
-        setVideo(movieTitle)
+        setVideo(title)
         movieTrailer(video).then((res) => {
           setVideoURL(res);
         });
@@ -17,17 +16,16 @@ const TrailerMovie = ({movieTitle}) => {
       useEffect(() => {
         handleSearch()
       },[videoURL])
-       
   return (
     <Fragment>
         <div className='Container'>
 
         </div>
         <div className='player'>
-        <ReactPlayer url={videoURL} controls={true} muted={false } />
+        <ReactPlayer url={videoURL} controls={true}/>
         </div>
     </Fragment>
   )
 }
 
-export default TrailerMovie
+export default TrailerTvshows
