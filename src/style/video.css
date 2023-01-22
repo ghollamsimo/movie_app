@@ -111,6 +111,9 @@ body{
     height: 260px;
   }
   #Exit1{
-    margin-left: 250px;
+    margin-left: 260px;
+  }
+  #play_Icon{
+    bottom: 70px;
   }
 } 
