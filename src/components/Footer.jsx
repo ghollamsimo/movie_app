@@ -7,7 +7,7 @@ const Footer = () => {
    
   <footer className='footer__container'>
             <div className='footer__container-links'>
-                <p>©Mohamed Ghollam 2022</p>
+                <p>©Mohamed Ghollam 2023</p>
                <Link to="/"> <a>Movie</a></Link>
                <Link to="/tvshows"><a>TvShow</a></Link> 
                 <Link to="/trending"><a>Trending</a></Link>
