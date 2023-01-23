@@ -43,7 +43,7 @@ const Navbar = () => {
           <span id={toggle ? 'Movies':'MoviesLight'}>Pricing</span>
           </NavLink>     
           <div className="login">
-          <button><Link to="/login">Login</Link></button>
+          <button className="login_button"><Link to="/login">Login</Link></button>
         </div>    
         </ul>
         </div>

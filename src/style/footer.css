@@ -20,10 +20,10 @@
     color: #0c0c14;
     font-family: 'Raleway', sans-serif;
     margin: 10px;
-    transition: 1s;
+    transition: 0.7s;
 }
 .footer__container-links a:hover{
-    color: rgb(170, 164, 164);
+    color: gray;
 }
 
 /* ==================for phone================ */
