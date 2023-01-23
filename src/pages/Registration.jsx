@@ -1,14 +1,48 @@
-import React, { Fragment } from 'react'
+import { async } from '@firebase/util'
+import { Alert } from 'bootstrap'
+import React, { Fragment, useRef, useEffect } from 'react'
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import Aos from 'aos'
+import "aos/dist/aos.css"
 import '../style/login.css'
 
 const Registration = () => {
+      //Animation Scrool
+  useEffect(() =>{
+    Aos.init({duration:2000});
+  }, [])
+
+
+
+    // const {signup} = useAuth()
+    // const [error , setError] = useState("")
+    // const [loading, setLoading] = useState(false)
+    // const nameRef= useRef()
+    // const emailRef= useRef()
+    // const passwordRef= useRef()
+    // const passwordConfirmationRef= useRef()
+    // const handleSubmit = async (e) =>{
+    //     if(passwordRef.current.value !== passwordConfirmationRef.current.value){
+    //         return setError("Password do not match")
+    //     }
+    //     e.preventDefault();
+    //     try{
+    //         setError("")
+    //         setLoading(true)
+    //         await signup(nameRef.current.value, emailRef.current.value, passwordRef.current.value)
+    //     }catch{
+    //         setError("faild to create an account")
+    //     }
+    //     setLoading(false)
+    // }
   return (
     <Fragment className="signup">
-    <div className="flex flex-col items-center min-h-screen pt-6 sm:justify-center sm:pt-0 " id='login_container'>
+    <div className="flex flex-col items-center min-h-screen pt-6 sm:justify-center sm:pt-0 " id='login_container' data-aos="fade-up">
        
         <div className="w-full px-6 py-4 mt-6 overflow-hidden bg-white shadow-md sm:max-w-lg sm:rounded-lg" id='signup'>
-            <form>
+            {/* {error && <Alert variant="danger">{error}</Alert>} */}
+            <form >
                 <div>
                     <label
                         htmlFor="name"
@@ -18,7 +52,8 @@ const Registration = () => {
                     </label>
                     <div className="flex flex-col items-start">
                         <input
-                            type="text"
+                           type="text"
+                        //    ref={nameRef}
                             name="name"
                             className="block w-full px-4 py-2 mt-2 bg-white border rounded-md focus:border-purple-400 focus:ring-purple-300 focus:outline-none focus:ring focus:ring-opacity-40"
                         />
@@ -34,6 +69,7 @@ const Registration = () => {
                     <div className="flex flex-col items-start">
                         <input
                             type="email"
+                            // ref={emailRef}
                             name="email"
                             className="block w-full px-4 py-2 mt-2 bg-white border rounded-md focus:border-purple-400 focus:ring-purple-300 focus:outline-none focus:ring focus:ring-opacity-40"
                         />
@@ -49,6 +85,7 @@ const Registration = () => {
                     <div className="flex flex-col items-start">
                         <input
                             type="password"
+                            // ref={passwordRef}
                             name="password"
                             className="block w-full px-4 py-2 mt-2 bg-white border rounded-md focus:border-purple-400 focus:ring-purple-300 focus:outline-none focus:ring focus:ring-opacity-40"
                         />
@@ -64,6 +101,7 @@ const Registration = () => {
                     <div className="flex flex-col items-start">
                         <input
                             type="password"
+                            // ref={passwordConfirmationRef}
                             name="password_confirmation"
                             className="block w-full px-4 py-2 mt-2 bg-white border rounded-md focus:border-purple-400 focus:ring-purple-300 focus:outline-none focus:ring focus:ring-opacity-40"
                         />
@@ -71,7 +109,9 @@ const Registration = () => {
                 </div>
               
                 <div className="flex items-center mt-4">
-                    <button className="w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-blue-900 rounded-md hover:bg-blue-700 focus:outline-none focus:bg-blue-700">
+                    <button 
+                    // disabled={loading}
+                    className="w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-blue-900 rounded-md hover:bg-blue-700 focus:outline-none focus:bg-blue-700">
                         Register
                     </button>
                 </div>

@@ -5,10 +5,19 @@ import NOIMG from '../assets/no_img.jpg'
 import {Container} from './Navbar'
 import '../style/video.css'
 import TrailerTv from '../video/TrailerTv'
+import Aos from 'aos'
+import "aos/dist/aos.css"
 
 
 
 const TvShows = () => {
+
+    //Animation Scrool
+    useEffect(() =>{
+      Aos.init({duration:2000});
+    }, [])
+  
+  
   const {toggle, inputValue } = useContext(Container)
   const input =inputValue
   const [showData, setShowData] = useState([])
@@ -42,7 +51,7 @@ const TvShows = () => {
       {showData.map((shows)=>{
         return(
           <Fragment key={shows.id}>
-            <div id={trailer ? 'container' : 'No_Container'}>
+            <div id={trailer ? 'container' : 'No_Container'} data-aos="fade-up">
                <AiFillPlayCircle fontSize={40} color="#FFF" id={trailer ?  'play_Icon' : 'hide'} onClick={() => TvShowTitle(shows)}/> 
               <img src={shows.poster_path ? `${Imges}${shows.poster_path}` : NOIMG}
                alt=""

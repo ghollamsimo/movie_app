@@ -5,8 +5,16 @@ import {AiFillPlayCircle, AiOutlineClose} from 'react-icons/ai'
 import '../style/video.css'
 import NOIMG from '../assets/no_img.jpg'
 import TrailerMovie from '../video/TrailerMovie'
+import Aos from 'aos'
+import "aos/dist/aos.css"
 
 const Movies = () => {
+  //Animation Scrool
+  useEffect(() =>{
+    Aos.init({duration:2000});
+  }, [])
+
+
   const {toggle, inputValue } = useContext(Container)
   const input =inputValue
   const [moviesDatat, setMoviesData] = useState([])
@@ -38,12 +46,12 @@ const Movies = () => {
    }
   return (
     <Fragment>
-        <div className={toggle ? "mainBg_Color" : 'secondaryBgColor'}>
+        <div className={toggle ? "mainBg_Color" : 'secondaryBgColor'} >
           <div className='movies--container'>
         {moviesDatat.map((movie) => {
           return(
           <Fragment>
-            <div id={trailer ? 'container' : 'No_Container'}>
+            <div id={trailer ? 'container' : 'No_Container'} data-aos="fade-up">
                <AiFillPlayCircle fontSize={40} color="#FFF" id={trailer ?  'play_Icon' : 'hide'} onClick={() => Moviestitle(movie)}/>
               <img src={movie.poster_path ? `${Imges}${movie.poster_path}` : NOIMG} alt=""onClick={() => Moviestitle(movie)} />
               <h5 id={movie.title.length > 40 ? 'smaller-Text' : ""}

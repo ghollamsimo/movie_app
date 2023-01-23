@@ -3,8 +3,16 @@ import React, { Fragment, useContext, useEffect, useState } from 'react'
 import {Container} from './Navbar'
 import {AiFillPlayCircle, AiOutlineClose} from 'react-icons/ai'
 import NOIMG from '../assets/no_img.jpg'
+import Aos from 'aos'
+import "aos/dist/aos.css"
 
 const Trending = () => {
+    //Animation Scrool
+    useEffect(() =>{
+      Aos.init({duration:2000});
+    }, [])
+  
+  
   const {toggle, inputValue } = useContext(Container)
   const input =inputValue
   const Api = 'https://api.themoviedb.org/3'
@@ -45,7 +53,7 @@ const Trending = () => {
             {trendArray.map((trend) =>{
               return(
                 <Fragment>
-                <div id={trailer ? 'container' : 'No_Container'}>
+                <div id={trailer ? 'container' : 'No_Container'} data-aos="fade-up">
                  <AiFillPlayCircle color='#fff' fontSize={40} id={trailer ? 'play_Icon' : 'hide'} onClick={() => trendTitle(trend)}/>
                  <img src={trend.poster_path ? `${Imges}${trend.poster_path}` : NOIMG } alt="" onClick={() => TrendTitle(trend)} />
                  <h3 className={toggle ? 'mainColor' : 'secondaryColor'}

@@ -1,14 +1,21 @@
-import React, { Fragment } from 'react'
+import React, { Fragment, useEffect } from 'react'
 import { Link, Route,Routes } from 'react-router-dom'
 import '../style/login.css'
 import Registration from './Registration'
-
+import Aos from 'aos'
+import "aos/dist/aos.css"
 
 
 const Login = () => {
+      //Animation Scrool
+  useEffect(() =>{
+    Aos.init({duration:2000});
+  }, [])
+
+
   return (
     <Fragment>
-    <div className="relative flex flex-col justify-center min-h-screen overflow-hidden" id='login_container'>
+    <div className="relative flex flex-col justify-center min-h-screen overflow-hidden" id='login_container' data-aos="fade-up">
     <div className="w-full p-6 m-auto bg-white rounded-md shadow-xl lg:max-w-xl">
         <h1 className="text-3xl font-semibold text-center uppercase font-Raleway">
             Sign in
