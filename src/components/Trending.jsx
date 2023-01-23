@@ -24,6 +24,7 @@ const Trending = () => {
     })
     const results= data.data.results
     setTrendArray(results)
+    console.log(data)
   }
 
   useEffect(() =>{

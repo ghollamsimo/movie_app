@@ -168,6 +168,7 @@ span #HomeLight:hover, #MoviesLight:hover, #TrendingLight:hover, #PricingLight:h
    nav{
     height: 100px;
     width: fit-content;
+    /* height: 80px; */
    }
    .input-grouup {
     margin-left: -40px;

@@ -1,7 +1,10 @@
 #login_container{
   color: #0c0c14;
   font-family: 'Raleway', sans-serif;
-  bottom: 40px;
+  bottom: 50px;
+}
+.signup{
+  margin: 20px;
 }
 /* ==================for phone================ */
 @media only screen and (max-width: 600px) {

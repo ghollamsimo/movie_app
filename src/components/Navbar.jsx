@@ -8,6 +8,7 @@ import {HiSearch} from 'react-icons/hi'
 import { NavLink, Route, Routes, Link } from 'react-router-dom'
 import '../style/NavStyle.css'
 import { Fragment } from "react";
+import Registration from "../pages/Registration";
 
 export const Container = React.createContext()
 
@@ -29,7 +30,7 @@ const Navbar = () => {
         <div className="nav-options">
           
         <ul className="md:flex hidden uppercase items-center gap-8 font-[Raleway] links">
-        <h1 className="logo">CimaFlex</h1>
+        <Link to="/"><h1 className="logo">CimaFlex</h1></Link>
         <NavLink to="/">
           <span id={toggle ? 'Movies':'MoviesLight'}>Movies</span>
           </NavLink>
@@ -80,6 +81,7 @@ const Navbar = () => {
         <Route path="trending" element={<Trending/>}/>
         <Route path="pricing" element={<Pricing/>}/>  
         <Route path="login" element={<Login/>}/>
+        <Route path='signup' element={<Registration/>}/>
     </Routes>
     </Fragment>
     </Container.Provider>

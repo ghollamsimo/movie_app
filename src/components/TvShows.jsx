@@ -4,7 +4,9 @@ import {AiFillPlayCircle, AiOutlineClose} from 'react-icons/ai'
 import NOIMG from '../assets/no_img.jpg'
 import {Container} from './Navbar'
 import '../style/video.css'
-import TrailerTvshows from '../video/TrailerTvshows'
+import TrailerTv from '../video/TrailerTv'
+
+
 
 const TvShows = () => {
   const {toggle, inputValue } = useContext(Container)
@@ -28,10 +30,9 @@ const TvShows = () => {
   useEffect(() => {
     TvShows()
   },[input])
-  console.log(showData)
 
-  const TvShowtitle = (shows) =>{
-    setTitle(shows)
+  const TvShowTitle = (shows) =>{
+    setTitle(shows.name)
      setTrailer(!trailer)
   }
   return (
@@ -42,10 +43,10 @@ const TvShows = () => {
         return(
           <Fragment key={shows.id}>
             <div id={trailer ? 'container' : 'No_Container'}>
-               <AiFillPlayCircle fontSize={40} color="#FFF" id={trailer ?  'play_Icon' : 'hide'} onClick={() => TvShowtitle(shows)}/> 
+               <AiFillPlayCircle fontSize={40} color="#FFF" id={trailer ?  'play_Icon' : 'hide'} onClick={() => TvShowTitle(shows)}/> 
               <img src={shows.poster_path ? `${Imges}${shows.poster_path}` : NOIMG}
                alt=""
-                onClick={() => TvShowtitle(shows)}
+                onClick={() => TvShowTitle(shows)}
               />
               <h5 className={toggle ? 'mainColor' : 'secondaryColor'}
                id={shows.name.length > 40 ? 'smaller-Text' : ""}>
@@ -55,7 +56,7 @@ const TvShows = () => {
           </Fragment>
         )
       })}
-      {trailer ? console.log : <TrailerTvshows title={title}/>}
+     {trailer ? console.log : <TrailerTv TvShowsTitle={title}/>}
         <AiOutlineClose id={trailer ? 'Nothing' : 'Exit1' } 
        className={toggle ? 'DarkTheme' : 'LightThemeClose'}
        fontSize={55} color="#fff" cursor={'pointer'} 
