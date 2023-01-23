@@ -152,7 +152,7 @@ span #HomeLight:hover, #MoviesLight:hover, #TrendingLight:hover, #PricingLight:h
     background-color: #0c0c14;
     color: #fff;
     padding: 5px 17px;
-    margin-left: 165px;
+    margin-left: 150px;
     width: fit-content;
     border-radius: 7px;
     transition: 0.7s;
