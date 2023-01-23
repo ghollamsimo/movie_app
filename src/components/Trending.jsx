@@ -5,6 +5,7 @@ import {AiFillPlayCircle, AiOutlineClose} from 'react-icons/ai'
 import NOIMG from '../assets/no_img.jpg'
 import Aos from 'aos'
 import "aos/dist/aos.css"
+import TrailerTrend from '../video/TrailerTrend'
 
 const Trending = () => {
     //Animation Scrool
@@ -56,14 +57,15 @@ const Trending = () => {
                 <div id={trailer ? 'container' : 'No_Container'} data-aos="fade-up">
                  <AiFillPlayCircle color='#fff' fontSize={40} id={trailer ? 'play_Icon' : 'hide'} onClick={() => trendTitle(trend)}/>
                  <img src={trend.poster_path ? `${Imges}${trend.poster_path}` : NOIMG } alt="" onClick={() => TrendTitle(trend)} />
-                 <h3 className={toggle ? 'mainColor' : 'secondaryColor'}
-               id= 'smaller-Text' >
+                 <h2 className={toggle ? 'mainColor' : 'secondaryColor'}
+                >
                 {trend.title}
-              </h3> 
+              </h2> 
                 </div>
                 </Fragment>
               )
             })}
+             {trailer ? console.log : <TrailerTrend TrendTitle={trendTitle}/>}
              <AiOutlineClose id={trailer ? 'Nothing' : 'Exit1' } 
        className={toggle ? 'DarkTheme' : 'LightThemeClose'}
        fontSize={55} color="#fff" cursor={'pointer'} 
