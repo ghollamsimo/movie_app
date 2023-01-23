@@ -12,7 +12,10 @@ const Footer = () => {
                <Link to="/tvshows"><a>TvShow</a></Link> 
                 <Link to="/trending"><a>Trending</a></Link>
                 <Link to="/pricing"> <a>Pricing</a></Link>
-                
+                <Link><a href='https://developers.themoviedb.org/3'>Api</a></Link>
+            </div>
+            <div className='footer__container-info'>
+
             </div>
         </footer>
   )

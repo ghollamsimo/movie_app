@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import '../style/login.css'
 
 
@@ -35,12 +36,12 @@ const Login = () => {
                     className="block w-full px-4 py-2 mt-2 bg-white border rounded-md focus:border-purple-400 focus:ring-purple-300 focus:outline-none focus:ring focus:ring-opacity-40"
                 />
             </div>
-            <a
-                href="#"
+            <Link
+              
                 className="text-xs text-blue-800 hover:underline"
             >
                 Forget Password?
-            </a>
+            </Link>
             <div className="mt-6">
                 <button className="w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-blue-900 rounded-md hover:bg-blue-700 focus:outline-none focus:bg-blue-700">
                     Login
@@ -86,12 +87,11 @@ const Login = () => {
         <p className="mt-8 text-xs font-light text-center text-gray-700">
             {" "}
             Don't have an account?{" "}
-            <a
-                href="#"
+            <Link
                 className="font-medium text-blue-800 hover:underline"
             >
                 Sign up
-            </a>
+            </Link>
         </p>
     </div>
 </div>

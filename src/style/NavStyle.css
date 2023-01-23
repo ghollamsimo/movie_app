@@ -164,7 +164,7 @@ span #HomeLight:hover, #MoviesLight:hover, #TrendingLight:hover, #PricingLight:h
 }
 
 /* ==================for phone================ */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1024px) {
    nav{
     height: 100px;
     width: fit-content;
