@@ -167,7 +167,7 @@ span #HomeLight:hover, #MoviesLight:hover, #TrendingLight:hover, #PricingLight:h
 @media only screen and (max-width: 600px) {
    nav{
     height: 100px;
-    width: 600px;
+    width: fit-content;
    }
    .input-grouup {
     margin-left: -40px;
