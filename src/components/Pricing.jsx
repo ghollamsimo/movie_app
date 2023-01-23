@@ -17,6 +17,10 @@ const Pricing = () => {
           <div className="services__head">
             <h3>Basic</h3>
           </div>
+<br />
+          <div className='price'>
+            <li><span style={{color:"#1D4ED8" , fontSize:"1.6rem"}}>7.99$</span>Monthly</li>
+          </div>
 
           <ul className="services__list">
             <li>
@@ -49,6 +53,10 @@ const Pricing = () => {
         <article className="service" data-aos="fade-up">
           <div className="services__head" >
             <h3>Premium</h3>
+          </div>
+<br />
+          <div className='price'>
+            <li><span style={{color:"#1D4ED8" , fontSize:"1.6rem"}}>18.99$</span>Monthly</li>
           </div>
 
           <ul className="services__list">
@@ -86,6 +94,10 @@ const Pricing = () => {
         <article className="service" data-aos="fade-left">
           <div className="services__head">
             <h3>Standard</h3>
+          </div>
+<br />
+          <div className='price'>
+            <li><span style={{color:"#1D4ED8" , fontSize:"1.6rem"}}>12.99$</span>Monthly</li>
           </div>
 
           <ul className="services__list">

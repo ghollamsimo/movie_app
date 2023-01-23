@@ -26,7 +26,12 @@
     font-size: 1.5rem;
     text-align: center;
   }
-  
+  .price{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
   .services__list {
     padding: 2rem;
   }
