@@ -3,8 +3,13 @@
   font-family: 'Raleway', sans-serif;
   bottom: 50px;
 }
-.signup{
+#signup{
   margin: 20px;
+}
+.login_container_signup{
+  color: #0c0c14;
+  font-family: 'Raleway', sans-serif;
+  bottom: 50px;
 }
 /* ==================for phone================ */
 @media only screen and (max-width: 600px) {

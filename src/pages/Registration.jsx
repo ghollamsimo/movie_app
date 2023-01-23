@@ -4,10 +4,10 @@ import '../style/login.css'
 
 const Registration = () => {
   return (
-    <Fragment>
-    <div className="flex flex-col items-center min-h-screen pt-6 sm:justify-center sm:pt-0 " id='login_container signup'>
+    <Fragment className="signup">
+    <div className="flex flex-col items-center min-h-screen pt-6 sm:justify-center sm:pt-0 " id='login_container'>
        
-        <div className="w-full px-6 py-4 mt-6 overflow-hidden bg-white shadow-md sm:max-w-lg sm:rounded-lg">
+        <div className="w-full px-6 py-4 mt-6 overflow-hidden bg-white shadow-md sm:max-w-lg sm:rounded-lg" id='signup'>
             <form>
                 <div>
                     <label
