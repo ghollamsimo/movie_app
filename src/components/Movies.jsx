@@ -1,7 +1,8 @@
 import React, {Fragment, useContext, useEffect, useState} from 'react'
 import axios from 'axios'
 import {Container} from './Navbar'
-import {AiFillPlayCircle, AiOutlineCloseCircle} from 'react-icons/ai'
+import {AiFillPlayCircle} from 'react-icons/ai'
+import {SlClose} from 'react-icons/sl'
 import '../style/video.css'
 import NOIMG from '../assets/no_img.jpg'
 import TrailerMovie from '../video/TrailerMovie'
@@ -51,7 +52,7 @@ const Movies = () => {
         {moviesDatat.map((movie) => {
           return(
           <Fragment>
-            <div id={trailer ? 'container' : 'No_Container'} data-aos="fade-up">
+            <div id={trailer ? 'container' : 'No_Container'} data-aos="fade-right">
                <AiFillPlayCircle fontSize={40} color="#FFF" id={trailer ?  'play_Icon' : 'hide'} onClick={() => Moviestitle(movie)}/>
               <img src={movie.poster_path ? `${Imges}${movie.poster_path}` : NOIMG} alt=""onClick={() => Moviestitle(movie)} />
               <h5 id={movie.title.length > 40 ? 'smaller-Text' : ""}
@@ -64,7 +65,7 @@ const Movies = () => {
         )
         })}
         {trailer ? console.log : <TrailerMovie movieTitle={movieTitle}/>}
-           <AiOutlineCloseCircle id={trailer ? 'Nothing' : 'Exit1' } 
+           <SlClose id={trailer ? 'Nothing' : 'Exit1' } 
        className={toggle ? 'DarkTheme' : 'LightThemeClose'}
        fontSize={55} color="#fff" cursor={'pointer'} 
        onClick={() => setTrailer(true)}
