@@ -55,7 +55,7 @@ const Trending = () => {
             {trendArray.map((trend) =>{
               return(
                 <Fragment>
-                <div id={trailer ? 'container' : 'No_Container'} data-aos="fade-up">
+                <div id={trailer ? 'container' : 'No_Container'} data-aos="fade-right">
                  <AiFillPlayCircle color='#fff' fontSize={40} id={trailer ? 'play_Icon' : 'hide'} onClick={() => trendTitle(trend)}/>
                  <img src={trend.poster_path ? `${Imges}${trend.poster_path}` : NOIMG } alt="" onClick={() => TrendTitle(trend)} />
                  <h2 className={toggle ? 'mainColor' : 'secondaryColor'}

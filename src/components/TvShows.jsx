@@ -52,7 +52,7 @@ const TvShows = () => {
       {showData.map((shows)=>{
         return(
           <Fragment key={shows.id}>
-            <div id={trailer ? 'container' : 'No_Container'} data-aos="fade-up">
+            <div id={trailer ? 'container' : 'No_Container'} data-aos="fade-right">
                <AiFillPlayCircle fontSize={40} color="#FFF" id={trailer ?  'play_Icon' : 'hide'} onClick={() => TvShowTitle(shows)}/> 
               <img src={shows.poster_path ? `${Imges}${shows.poster_path}` : NOIMG}
                alt=""
