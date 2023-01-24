@@ -1,7 +1,7 @@
 import axios from 'axios'
 import React, { Fragment, useContext, useEffect, useState } from 'react'
 import {Container} from './Navbar'
-import {AiFillPlayCircle, AiOutlineClose} from 'react-icons/ai'
+import {AiFillPlayCircle, AiOutlineCloseCircle} from 'react-icons/ai'
 import NOIMG from '../assets/no_img.jpg'
 import Aos from 'aos'
 import "aos/dist/aos.css"
@@ -66,7 +66,7 @@ const Trending = () => {
               )
             })}
              {trailer ? console.log : <TrailerTrend TrendTitle={trendTitle}/>}
-             <AiOutlineClose id={trailer ? 'Nothing' : 'Exit1' } 
+             <AiOutlineCloseCircle id={trailer ? 'Nothing' : 'Exit1' } 
        className={toggle ? 'DarkTheme' : 'LightThemeClose'}
        fontSize={55} color="#fff" cursor={'pointer'} 
        onClick={() => setTrailer(true)}

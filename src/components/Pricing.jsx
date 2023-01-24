@@ -12,7 +12,7 @@ const Pricing = () => {
   return (
     <Fragment>
       <div className="container services__container">
-        {/*  UI/UX */}
+        {/*  Basic */}
         <article className="service" data-aos="fade-right">
           <div className="services__head">
             <h3>Basic</h3>

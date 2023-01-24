@@ -6,7 +6,8 @@
   }
   .service {
     background: #fff;
-    margin: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
     border-radius: 0 0 2rem 2rem;
     border: 1px solid #5858c2;
     height: fit-content;

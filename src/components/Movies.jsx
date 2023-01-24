@@ -1,7 +1,7 @@
 import React, {Fragment, useContext, useEffect, useState} from 'react'
 import axios from 'axios'
 import {Container} from './Navbar'
-import {AiFillPlayCircle, AiOutlineClose} from 'react-icons/ai'
+import {AiFillPlayCircle, AiOutlineCloseCircle} from 'react-icons/ai'
 import '../style/video.css'
 import NOIMG from '../assets/no_img.jpg'
 import TrailerMovie from '../video/TrailerMovie'
@@ -64,7 +64,7 @@ const Movies = () => {
         )
         })}
         {trailer ? console.log : <TrailerMovie movieTitle={movieTitle}/>}
-           <AiOutlineClose id={trailer ? 'Nothing' : 'Exit1' } 
+           <AiOutlineCloseCircle id={trailer ? 'Nothing' : 'Exit1' } 
        className={toggle ? 'DarkTheme' : 'LightThemeClose'}
        fontSize={55} color="#fff" cursor={'pointer'} 
        onClick={() => setTrailer(true)}

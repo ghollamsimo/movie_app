@@ -23,7 +23,8 @@ const TrailerTrend = ({TrendTitle}) => {
 
     </div>
     <div className='player'>
-    <ReactPlayer className='video' url={videoURL} controls={true} muted={false } />
+    <ReactPlayer className='video' url={videoURL} controls={false} muted={false }  width="100%"
+      height="100%"/>
     </div>
 </Fragment>
   )

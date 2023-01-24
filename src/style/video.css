@@ -20,7 +20,7 @@ body{
     height: 510px;
     margin: 25px 0px 4px 15px;
     border-radius: 18px;
-    opacity: 0.40;
+    opacity: 1;
 }
 .movies--container img:hover{
     opacity: 1;
@@ -69,13 +69,13 @@ body{
     bottom: 60px;
     left: 40px;
     visibility: visible;
-    z-index: 0.99;
+    z-index: 1;
     cursor: pointer;
 }
 #Exit1{
     position: fixed;
     margin-left: 900px;
-    margin-top: 67px;
+    margin-top: 20px;
     z-index: 1000;
 }
 .Exite1{
