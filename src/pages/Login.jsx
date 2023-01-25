@@ -15,7 +15,7 @@ const Login = () => {
 
   return (
     <Fragment>
-    <div className="relative flex flex-col justify-center min-h-screen overflow-hidden" id='login_container' data-aos="fade-up">
+    <div className="relative flex flex-col justify-center min-h-screen overflow-hidden" id='login_container' data-aos="fade-right">
     <div className="w-full p-6 m-auto bg-white rounded-md shadow-xl lg:max-w-xl">
         <h1 className="text-3xl font-semibold text-center uppercase font-Raleway">
             Sign in
