@@ -11,7 +11,7 @@ import TrailerTrend from '../video/TrailerTrend'
 const Trending = () => {
     //Animation Scrool
     useEffect(() =>{
-      Aos.init({duration:2000});
+      Aos.init({duration:1500});
     }, [])
   
   
