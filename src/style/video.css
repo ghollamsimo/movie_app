@@ -4,7 +4,6 @@ body{
 .movies--container{
     display: grid;
     grid-template-columns: repeat(4,1fr);
-    justify-content: center;
 }
 .mainBg_Color{
     background-color:#0c0c14;

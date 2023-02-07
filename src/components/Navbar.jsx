@@ -14,7 +14,7 @@ export const Container = React.createContext()
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
-  const [close, setClose] = useState([])
+  const [close, setClose] = useState(false)
   const [toggle, setToggle]= useState(true)
   const [inputValue, setInputValue] = useState("")
   return (
@@ -24,11 +24,11 @@ const Navbar = () => {
       <div className="flex items-center font-medium justify-around">
         <div className="z-50 p-5 md:w-auto w-full flex justify-center">
           
-          <div cursor={'pointer'} className="text-3xl md:hidden" onClick={() => setOpen(!open)} onChange={() => setClose(!close)}>
-            <ion-icon name={`${open ? "close" : "menu"}`} onClick={() => setClose(close)} ></ion-icon>
+          <div cursor={'pointer'} className="text-3xl md:hidden cursor-pointer" onClick={() => setOpen(!open)}>
+            <ion-icon name={`${open ? "close" : "menu"}`}  ></ion-icon>
           </div>
         </div>
-        <div className="nav-options">
+        <div className="nav-options" onClick={() => setClose(close)}>
           
         <ul className="md:flex hidden uppercase items-center gap-8 font-[Raleway] links">
         <Link to="/"><h1 className="logo">CimaFlex</h1></Link>
@@ -44,8 +44,8 @@ const Navbar = () => {
           <NavLink to="/pricing">
           <span id={toggle ? 'Movies':'MoviesLight'}>Pricing</span>
           </NavLink>     
-          <div className="login">
-          <button className="login_button"><Link to="/login">Login</Link></button>
+          <div className="login flex-col justify-center items-center">
+          <button className="login_button flex-col justify-center items-center"><Link className="text-center" to="/login">Login</Link></button>
         </div>    
         </ul>
         </div>
@@ -55,13 +55,14 @@ const Navbar = () => {
         
         </div>
         {/* Mobile nav */}
-        <div className="mobile" onClick={() => setClose(close)}>
+        <div className="mobile">
         <ul
+         onClick={() => setClose(!close)}
           className={`links_
         md:hidden bg-white fixed w-full top-0 overflow-y-auto bottom-0 py-24 pl-4
         duration-500 z-index-1 ${open ? "left-0" : "left-[-100%]"}
         `}
-        onChange={() => setClose(!close)}
+        onChange={() => setClose(close)}
         cursor={'pointer'}
         >
           <li><h1 className="logo">CimaFlex</h1></li>
