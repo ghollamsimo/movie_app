@@ -104,6 +104,8 @@ body{
  @media screen and (max-width: 600px) {
     .movies--container{
         grid-template-columns: repeat(2, 1fr);
+        margin-left: -10px;
+        padding: 0;
     }
   .movies--container img{
     width: 170px;
