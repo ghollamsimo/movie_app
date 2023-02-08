@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 const Footer = () => {
   return (
    
-  <footer className='footer__container'>
+  <footer className='footer__container w-full'>
             <div className='footer__container-links'>
                 <p>©Mohamed Ghollam - CimaFlex 2023.</p>
                <Link to="/"> <a>Movie</a></Link>

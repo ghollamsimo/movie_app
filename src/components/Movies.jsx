@@ -48,7 +48,7 @@ const Movies = () => {
   return (
     <Fragment>
         <div className={toggle ? "mainBg_Color" : 'secondaryBgColor'} >
-          <div className='movies--container'>
+          <div className='movies--container text-center'>
         {moviesDatat.map((movie) => {
           return(
           <Fragment>

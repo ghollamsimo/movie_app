@@ -55,7 +55,7 @@ const Navbar = () => {
         
         </div>
         {/* Mobile nav */}
-        <div className="mobile">
+        <div className="mobile w-full">
         <ul
          onClick={() => setClose(!close)}
           className={`links_
