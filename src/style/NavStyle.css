@@ -87,7 +87,7 @@ span #HomeLight:hover, #MoviesLight:hover, #TrendingLight:hover, #PricingLight:h
     position: relative;
     width: 270px;
     height: 4vh;
-    border-radius: 16px;
+    border-radius: 7px;
     border: none;
     margin-right: 30px;
     outline: none;

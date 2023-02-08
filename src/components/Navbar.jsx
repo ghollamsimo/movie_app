@@ -20,7 +20,7 @@ const Navbar = () => {
   return (
     <Container.Provider value={{toggle, inputValue}}>
     <Fragment>
-    <nav className="bg-white" >
+    <nav className="bg-white w-full" >
       <div className="flex items-center font-medium justify-around">
         <div className="z-50 p-5 md:w-auto w-full flex justify-center">
           
