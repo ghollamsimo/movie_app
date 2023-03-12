@@ -45,7 +45,7 @@ const Navbar = () => {
           <span id={toggle ? 'Movies':'MoviesLight'}>Pricing</span>
           </NavLink>     
           <div className="login flex-col justify-center items-center">
-          <button className="login_button flex-col justify-center items-center"><Link className="text-center" to="/login">Login</Link></button>
+          <Link className="text-center login_links" to="/login"> <button className="login_button flex-col justify-center items-center">Login</button></Link>
         </div>    
         </ul>
         </div>
@@ -65,7 +65,7 @@ const Navbar = () => {
         onChange={() => setClose(close)}
         cursor={'pointer'}
         >
-          <li><h1 className="logo">CimaFlex</h1></li>
+          <li><h1 className="logo text-center">CimaFlex</h1></li>
            {/* <h1 className="logo">CimaFlex</h1> */}
           <li><NavLink to="/">Movies</NavLink></li>
           <li><NavLink to="/tvshows">TvShow</NavLink></li>
