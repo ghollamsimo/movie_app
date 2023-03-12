@@ -125,6 +125,7 @@ span #HomeLight:hover, #MoviesLight:hover, #TrendingLight:hover, #PricingLight:h
 }
 .login_links :hover{
     color: #fff;
+    transition: 0.7s;
 }
 .links{
     margin: 20px;
