@@ -45,7 +45,7 @@ const Pricing = () => {
             </li>
           </ul>
           <div className='button_btn'>
-            <button className='button__btn'>Buy Now</button>
+            <button className="unederline  self-start uppercase font-semibold border-primary">Buy Now</button>
           </div>
         </article>
 
@@ -85,8 +85,8 @@ const Pricing = () => {
               <p>Lorem, ipsum dolor sit amet consectetur elit.</p>
             </li>
           </ul>
-          <div className='button_btn'>
-            <button className='button__btn'>Buy Now</button>
+          <div className='button_btn unederline'>
+            <button className="unederline  self-start uppercase font-semibold border-primary">Buy Now</button>
           </div>
         </article>
 
@@ -123,7 +123,7 @@ const Pricing = () => {
             </li>
           </ul>
           <div className='button_btn'>
-            <button className='button__btn'>Buy Now</button>
+            <button className="unederline  self-start uppercase font-semibold border-primary">Buy Now</button>
           </div>
         </article>
       </div>

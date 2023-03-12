@@ -47,7 +47,24 @@
     margin-top: -3px;
     font-size: 1.3rem;
   }
-  
+  /* underline */
+a{
+  text-decoration: none;
+}
+.unederline{
+  position: relative;
+}
+
+.unederline::before{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 1px;
+  background-color: #000000;
+  transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
   .services__list p {
     font-size: 0.9rem;
   }
